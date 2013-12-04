@@ -1,8 +1,8 @@
 var express = require('express');
 var cors = require("express-cors");
 var redis = require('redis'),
-    redisClient = redis.createClient(6379, 'localhost');
- 
+    redisClient = redis.createClient(6379, '' + process.env.REDIS_PORT_6379_TCP_ADDR);
+
 var app = express();
 
 app.use(cors({
@@ -48,5 +48,5 @@ app.post('/bold', function (req, res) {
     });
 });
 
-app.listen(3003);
-console.log('Listening on port 3003...');
+app.listen(3000);
+console.log('Listening on port 3000...');
