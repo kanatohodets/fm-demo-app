@@ -29,7 +29,7 @@ app.post('/italic', function (req, res) {
     var text = req.body.text || '';
 
     res.setHeader("Access-Control-Allow-Origin", "*");
-    redisClient.incr('bold_count', function (err, reply) {
+    redisClient.incr('italic_count', function (err, reply) {
         var end = new Date().getTime();;
         var elapsed = end - start;
         if (err) {
