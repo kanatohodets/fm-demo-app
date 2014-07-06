@@ -35,9 +35,8 @@ app.post('/bold', function (req, res) {
         if (err) {
             res.send({
                 error: true,
-                text: "sorry, there was a problem",
-                redisDelayMS: elapsed,
-                count: reply
+                text: "sorry, there was a problem reaching the database",
+                redisDelayMS: elapsed
             });
         }
         res.send({

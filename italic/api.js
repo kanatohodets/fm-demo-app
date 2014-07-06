@@ -37,7 +37,6 @@ app.post('/italic', function (req, res) {
                 error: true,
                 text: "sorry, there was a problem",
                 redisDelayMS: elapsed,
-                count: reply
             });
         }
         res.send({
