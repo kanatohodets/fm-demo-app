@@ -1,0 +1,9 @@
+FROM node
+
+ADD . /var/www/faas
+WORKDIR /var/www/faas
+RUN npm install
+
+EXPOSE 3000
+
+ENTRYPOINT ["node", "api.js" "--port 3000", "--style=bold"]

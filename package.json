@@ -1,6 +1,6 @@
 {
-    "name": "bold-as-a-service",
-    "description": "Bold-ifying API",
+    "name": "style-as-a-service",
+    "description": "Style-ifying API",
     "version": "0.0.1",
     "private": true,
     "dependencies": {
